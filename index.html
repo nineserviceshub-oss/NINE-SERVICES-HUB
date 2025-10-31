@@ -689,6 +689,134 @@
             color: var(--text);
         }
 
+        /* WhatsApp & Call Panel */
+        .contact-panel {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            box-shadow: var(--shadow-lg);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .contact-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .whatsapp-btn {
+            background-color: #25D366;
+        }
+
+        .call-btn {
+            background-color: var(--primary);
+        }
+
+        .contact-tooltip {
+            position: absolute;
+            right: 70px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--text);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+
+        .contact-btn:hover .contact-tooltip {
+            opacity: 1;
+        }
+
+        /* Form Submission Options */
+        .submission-options {
+            display: none;
+            background: var(--white);
+            border-radius: 10px;
+            padding: 25px;
+            margin-top: 20px;
+            box-shadow: var(--shadow);
+            border-top: 4px solid var(--success);
+        }
+
+        .submission-options.show {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .submission-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--success);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .submission-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .submission-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .whatsapp-submit {
+            background-color: #25D366;
+            color: white;
+        }
+
+        .whatsapp-submit:hover {
+            background-color: #128C7E;
+        }
+
+        .call-submit {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .call-submit:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .email-submit {
+            background-color: var(--accent);
+            color: white;
+        }
+
+        .email-submit:hover {
+            background-color: #e68a00;
+        }
+
         /* Responsive */
         @media (max-width: 992px) {
             .about-content,
@@ -744,6 +872,21 @@
                 left: 10px;
                 max-width: none;
             }
+
+            .contact-panel {
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .contact-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+            }
+
+            .submission-buttons {
+                flex-direction: column;
+            }
         }
 
         @media (max-width: 576px) {
@@ -760,6 +903,18 @@
 <body>
     <!-- Notification Container -->
     <div class="notification-container" id="notificationContainer"></div>
+
+    <!-- WhatsApp & Call Panel -->
+    <div class="contact-panel">
+        <a href="https://wa.me/250780067777?text=Hello%20NINE%20SERVICES%20HUB,%20I%20would%20like%20to%20inquire%20about%20your%20services" target="_blank" class="contact-btn whatsapp-btn">
+            <i class="fab fa-whatsapp"></i>
+            <span class="contact-tooltip">Chat with us on WhatsApp</span>
+        </a>
+        <a href="tel:+250788401818" class="contact-btn call-btn">
+            <i class="fas fa-phone-alt"></i>
+            <span class="contact-tooltip">Call us directly</span>
+        </a>
+    </div>
 
     <!-- Header -->
     <header class="site-header">
@@ -1158,91 +1313,110 @@
             <div class="container">
                 <div class="section-title">
                     <h2>Contact Us</h2>
-                    <p>Get in touch with us for any inquiries or service requests</p>
+                    <p>Get in touch with us for all your printing and service needs</p>
                 </div>
-                
                 <div class="contact-content">
                     <div class="contact-info">
                         <h3>Get In Touch</h3>
-                        <p>We're here to help with all your printing and service needs. Reach out to us through any of the following channels:</p>
-                        
                         <div class="contact-details">
                             <div class="contact-item">
                                 <i class="fas fa-map-marker-alt"></i>
                                 <div>
-                                    <h4>Our Location</h4>
-                                    <p>Musanze City Center, Rwanda</p>
+                                    <h4>Location</h4>
+                                    <p>Near RP / Musanze College — Open Every Day</p>
                                 </div>
                             </div>
-                            
                             <div class="contact-item">
-                                <i class="fas fa-phone-alt"></i>
+                                <i class="fas fa-phone"></i>
                                 <div>
-                                    <h4>Phone Number</h4>
-                                    <p>+250 788 123 456</p>
+                                    <h4>Phone</h4>
+                                    <p>+250 788 401 818 | +250 780 067 777 | +250 738 155 978</p>
                                 </div>
                             </div>
-                            
                             <div class="contact-item">
                                 <i class="fas fa-envelope"></i>
                                 <div>
-                                    <h4>Email Address</h4>
-                                    <p>info@nineserviceshub.com</p>
+                                    <h4>Email</h4>
+                                    <p>nineserviceshub@gmail.com</p>
                                 </div>
                             </div>
-                            
                             <div class="contact-item">
                                 <i class="fas fa-clock"></i>
                                 <div>
-                                    <h4>Working Hours</h4>
-                                    <p>Monday - Saturday: 8:00 AM - 8:00 PM</p>
-                                    <p>Sunday: 9:00 AM - 6:00 PM</p>
+                                    <h4>Business Hours</h4>
+                                    <p>Monday - Saturday: 8:00 AM - 7:00 PM</p>
+                                    <p>Sunday: 9:00 AM - 5:00 PM</p>
                                 </div>
                             </div>
                         </div>
+                        
+                        <h3>Follow Us</h3>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="https://wa.me/250780067777" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        </div>
                     </div>
-                    
                     <div class="contact-form">
                         <h3>Send Us a Message</h3>
                         <form id="contactForm">
                             <div class="form-group">
-                                <label for="name">Full Name</label>
-                                <input type="text" id="name" required>
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" placeholder="Enter your name" required>
                             </div>
-                            
                             <div class="form-group">
-                                <label for="email">Email Address</label>
-                                <input type="email" id="email" required>
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" name="email" placeholder="Enter your email" required>
                             </div>
-                            
                             <div class="form-group">
-                                <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone">
+                                <label for="phone">Your Phone</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
                             </div>
-                            
                             <div class="form-group">
                                 <label for="service">Service Interested In</label>
-                                <select id="service">
+                                <select id="service" name="service">
                                     <option value="">Select a service</option>
                                     <option value="printing">Printing & Photocopying</option>
                                     <option value="banking">Bank Services</option>
                                     <option value="scanning">Scanning & Emailing</option>
                                     <option value="typing">Typing & Document Editing</option>
-                                    <option value="online">Online Applications & Registration</option>
-                                    <option value="design">Graphic Design & Branding</option>
+                                    <option value="online">Online Applications</option>
+                                    <option value="design">Graphic Design</option>
                                     <option value="lamination">Lamination & ID Cards</option>
                                     <option value="invitations">Invitation Cards & Certificates</option>
                                     <option value="stationery">Stationery & Office Supplies</option>
                                 </select>
                             </div>
-                            
                             <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea id="message" required></textarea>
+                                <label for="message">Your Message</label>
+                                <textarea id="message" name="message" placeholder="How can we help you?" required></textarea>
                             </div>
-                            
                             <button type="submit" class="btn">Send Message</button>
                         </form>
+                        
+                        <!-- Form Submission Options -->
+                        <div class="submission-options" id="submissionOptions">
+                            <div class="submission-title">
+                                <i class="fas fa-check-circle"></i>
+                                Form Submitted Successfully!
+                            </div>
+                            <p>Thank you for your inquiry! Choose how you'd like us to contact you:</p>
+                            <div class="submission-buttons">
+                                <a href="https://wa.me/250780067777" target="_blank" class="submission-btn whatsapp-submit">
+                                    <i class="fab fa-whatsapp"></i>
+                                    WhatsApp Us
+                                </a>
+                                <a href="tel:+250788401818" class="submission-btn call-submit">
+                                    <i class="fas fa-phone-alt"></i>
+                                    Call Us Now
+                                </a>
+                                <a href="mailto:nineserviceshub@gmail.com" class="submission-btn email-submit">
+                                    <i class="fas fa-envelope"></i>
+                                    Send Email
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1260,10 +1434,9 @@
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://wa.me/250780067777" target="_blank"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
-                
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul class="footer-links">
@@ -1274,29 +1447,32 @@
                         <li><a class="nav-link" data-page="contact">Contact</a></li>
                     </ul>
                 </div>
-                
                 <div class="footer-col">
                     <h4>Our Services</h4>
                     <ul class="footer-links">
                         <li><a>Printing & Photocopying</a></li>
                         <li><a>Bank Services</a></li>
                         <li><a>Scanning & Emailing</a></li>
-                        <li><a>Typing & Document Editing</a></li>
+                        <li><a>Graphic Design</a></li>
                         <li><a>Online Applications</a></li>
                     </ul>
                 </div>
-                
                 <div class="footer-col">
                     <h4>Contact Info</h4>
-                    <ul class="footer-links">
-                        <li><a><i class="fas fa-map-marker-alt"></i> Musanze City Center</a></li>
-                        <li><a><i class="fas fa-phone-alt"></i> +250 788 123 456</a></li>
-                        <li><a><i class="fas fa-envelope"></i> info@nineserviceshub.com</a></li>
-                        <li><a><i class="fas fa-clock"></i> Mon-Sat: 8AM-8PM</a></li>
-                    </ul>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Near RP / Musanze College</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+250 788 401 818</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>nineserviceshub@gmail.com</p>
+                    </div>
                 </div>
             </div>
-            
             <div class="footer-bottom">
                 <p>&copy; 2023 NINE SERVICES HUB. All Rights Reserved.</p>
             </div>
@@ -1304,100 +1480,89 @@
     </footer>
 
     <script>
-        // Navigation
-        document.addEventListener('DOMContentLoaded', function() {
-            // Page navigation
-            const navLinks = document.querySelectorAll('.nav-link');
-            const pages = document.querySelectorAll('.page');
-            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-            const nav = document.querySelector('.nav');
-            
-            // Function to show a specific page
-            function showPage(pageId) {
-                // Hide all pages
-                pages.forEach(page => {
-                    page.classList.remove('active');
-                });
+        // Page Navigation
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
                 
-                // Show the selected page
-                document.getElementById(pageId).classList.add('active');
+                const pageId = this.getAttribute('data-page');
+                if (!pageId) return;
                 
                 // Update active nav link
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('data-page') === pageId) {
-                        link.classList.add('active');
+                document.querySelectorAll('.nav-link').forEach(nav => {
+                    nav.classList.remove('active');
+                });
+                this.classList.add('active');
+                
+                // Show selected page
+                document.querySelectorAll('.page').forEach(page => {
+                    page.classList.remove('active');
+                });
+                document.getElementById(pageId).classList.add('active');
+                
+                // Close mobile menu if open
+                document.querySelector('.nav').classList.remove('active');
+                
+                // Scroll to top
+                window.scrollTo(0, 0);
+                
+                // Show notification for navigation
+                showNotification(`Navigated to ${pageId.charAt(0).toUpperCase() + pageId.slice(1)} page`, 'info');
+            });
+        });
+
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('.nav').classList.toggle('active');
+        });
+
+        // Gallery filtering
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const filter = this.getAttribute('data-filter');
+                
+                // Update active filter button
+                document.querySelectorAll('.filter-btn').forEach(b => {
+                    b.classList.remove('active');
+                });
+                this.classList.add('active');
+                
+                // Filter gallery items
+                document.querySelectorAll('.gallery-item').forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'flex';
+                    } else {
+                        item.style.display = 'none';
                     }
                 });
                 
-                // Close mobile menu if open
-                nav.classList.remove('active');
-            }
-            
-            // Add click event to all nav links
-            navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const pageId = this.getAttribute('data-page');
-                    showPage(pageId);
-                    
-                    // Show notification for navigation
-                    showNotification(`Navigated to ${pageId.charAt(0).toUpperCase() + pageId.slice(1)} page`, 'info');
-                });
+                // Show notification for filter
+                showNotification(`Filtered gallery by ${filter}`, 'info');
             });
+        });
+
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
             
-            // Mobile menu toggle
-            mobileMenuBtn.addEventListener('click', function() {
-                nav.classList.toggle('active');
-            });
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value;
             
-            // Gallery filtering
-            const filterBtns = document.querySelectorAll('.filter-btn');
-            const galleryItems = document.querySelectorAll('.gallery-item');
+            // Show success notification
+            showNotification(`Thank you ${name}! Your message has been sent successfully.`, 'success', 5000);
             
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    // Remove active class from all buttons
-                    filterBtns.forEach(b => b.classList.remove('active'));
-                    
-                    // Add active class to clicked button
-                    this.classList.add('active');
-                    
-                    const filter = this.getAttribute('data-filter');
-                    
-                    // Filter gallery items
-                    galleryItems.forEach(item => {
-                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
-                            item.style.display = 'flex';
-                        } else {
-                            item.style.display = 'none';
-                        }
-                    });
-                    
-                    // Show notification for filter
-                    showNotification(`Filtered gallery by ${filter}`, 'info');
-                });
-            });
+            // Show submission options
+            document.getElementById('submissionOptions').classList.add('show');
             
-            // Contact form submission
-            const contactForm = document.getElementById('contactForm');
+            // Scroll to submission options
+            document.getElementById('submissionOptions').scrollIntoView({ behavior: 'smooth' });
             
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Get form values
-                const name = document.getElementById('name').value;
-                const service = document.getElementById('service').value;
-                
-                // Show success notification
-                showNotification(`Thank you ${name}! Your message has been sent. We'll contact you soon about ${service ? service : 'your inquiry'}.`, 'success');
-                
-                // Reset form
-                contactForm.reset();
-            });
-            
-            // Initialize the page with home active
-            showPage('home');
+            // Reset form
+            this.reset();
         });
 
         // Notification System
@@ -1466,6 +1631,9 @@
                 }
             }, 300);
         }
+        
+        // Set current year in footer
+        document.querySelector('.footer-bottom p').innerHTML = `&copy; ${new Date().getFullYear()} NINE SERVICES HUB. All Rights Reserved.`;
         
         // Demo notifications for different actions
         function demoNotifications() {
