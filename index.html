@@ -1367,11 +1367,11 @@
                             </div>
                             <div class="form-group">
                                 <label for="email">Your Email</label>
-                                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                                <input type="email" id="email" name="email" placeholder="Enter your email">
                             </div>
                             <div class="form-group">
                                 <label for="phone">Your Phone</label>
-                                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
                             </div>
                             <div class="form-group">
                                 <label for="service">Service Interested In</label>
@@ -1392,31 +1392,8 @@
                                 <label for="message">Your Message</label>
                                 <textarea id="message" name="message" placeholder="How can we help you?" required></textarea>
                             </div>
-                            <button type="submit" class="btn">Send Message</button>
+                            <button type="submit" class="btn">Send Message via WhatsApp</button>
                         </form>
-                        
-                        <!-- Form Submission Options -->
-                        <div class="submission-options" id="submissionOptions">
-                            <div class="submission-title">
-                                <i class="fas fa-check-circle"></i>
-                                Form Submitted Successfully!
-                            </div>
-                            <p>Thank you for your inquiry! Choose how you'd like us to contact you:</p>
-                            <div class="submission-buttons">
-                                <a href="https://wa.me/250780067777" target="_blank" class="submission-btn whatsapp-submit">
-                                    <i class="fab fa-whatsapp"></i>
-                                    WhatsApp Us
-                                </a>
-                                <a href="tel:+250788401818" class="submission-btn call-submit">
-                                    <i class="fas fa-phone-alt"></i>
-                                    Call Us Now
-                                </a>
-                                <a href="mailto:nineserviceshub@gmail.com" class="submission-btn email-submit">
-                                    <i class="fas fa-envelope"></i>
-                                    Send Email
-                                </a>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -1505,9 +1482,6 @@
                 
                 // Scroll to top
                 window.scrollTo(0, 0);
-                
-                // Show notification for navigation
-                showNotification(`Navigated to ${pageId.charAt(0).toUpperCase() + pageId.slice(1)} page`, 'info');
             });
         });
 
@@ -1535,13 +1509,10 @@
                         item.style.display = 'none';
                     }
                 });
-                
-                // Show notification for filter
-                showNotification(`Filtered gallery by ${filter}`, 'info');
             });
         });
 
-        // Contact form submission
+        // Contact form submission - WhatsApp Integration
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
@@ -1552,14 +1523,14 @@
             const service = document.getElementById('service').value;
             const message = document.getElementById('message').value;
             
+            // Create WhatsApp message
+            const whatsappMessage = `Hello NINE SERVICES HUB!%0A%0A*New Contact Form Submission*%0A%0A*Name:* ${name}%0A*Email:* ${email || 'Not provided'}%0A*Phone:* ${phone}%0A*Service Interested In:* ${service || 'Not specified'}%0A*Message:* ${message}`;
+            
+            // Open WhatsApp with pre-filled message
+            window.open(`https://wa.me/250780067777?text=${whatsappMessage}`, '_blank');
+            
             // Show success notification
-            showNotification(`Thank you ${name}! Your message has been sent successfully.`, 'success', 5000);
-            
-            // Show submission options
-            document.getElementById('submissionOptions').classList.add('show');
-            
-            // Scroll to submission options
-            document.getElementById('submissionOptions').scrollIntoView({ behavior: 'smooth' });
+            showNotification(`Thank you ${name}! Opening WhatsApp to send your message.`, 'success', 5000);
             
             // Reset form
             this.reset();
@@ -1635,24 +1606,12 @@
         // Set current year in footer
         document.querySelector('.footer-bottom p').innerHTML = `&copy; ${new Date().getFullYear()} NINE SERVICES HUB. All Rights Reserved.`;
         
-        // Demo notifications for different actions
-        function demoNotifications() {
-            // Show a welcome notification after page loads
+        // Show welcome notification only on first load
+        document.addEventListener('DOMContentLoaded', function() {
             setTimeout(() => {
-                showNotification('Welcome to NINE SERVICES HUB! Explore our 9 core services.', 'info', 6000);
+                showNotification('Welcome to NINE SERVICES HUB! Your one-stop service hub in Musanze.', 'info', 4000);
             }, 1000);
-            
-            // Show a notification when services are viewed
-            const servicesLink = document.querySelector('[data-page="services"]');
-            servicesLink.addEventListener('click', () => {
-                setTimeout(() => {
-                    showNotification('Check out our 9 comprehensive services!', 'info', 5000);
-                }, 500);
-            });
-        }
-        
-        // Initialize demo notifications
-        document.addEventListener('DOMContentLoaded', demoNotifications);
+        });
     </script>
 </body>
 </html>
