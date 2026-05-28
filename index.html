@@ -3,7 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NINE SERVICES HUB - Smart Prints & Bright Image Studio</title>
+    <title>NATIVE DIGITAL SOLUTIONS - Smart Printing, Digital Services & Bright Image Studio in Kamonyi, Rwanda</title>
+    <meta name="description" content="NATIVE DIGITAL SOLUTIONS in Kamonyi District, Kayenzi Sector, Rwanda - Your one-stop for smart printing, digital services, photocopying, banking services, graphic design, document editing, online applications, and office supplies.">
+    <meta name="keywords" content="printing kamonyi, digital services rwanda, photocopy kayenzi, banking services rwanda, graphic design kamonyi, document editing, office supplies rwanda, online applications rwanda, Irembo services, smart printing rwanda">
+    <meta name="author" content="NATIVE DIGITAL SOLUTIONS">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="RW">
+    <meta name="geo.placename" content="Kamonyi, Kayenzi Sector">
+    <link rel="canonical" href="https://nine-services-hub.vercel.app/">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="NATIVE DIGITAL SOLUTIONS - Smart Printing & Digital Services in Kamonyi">
+    <meta property="og:description" content="Your one-stop for smart printing, digital services, banking services, graphic design and office solutions in Kamonyi District, Rwanda">
+    <meta property="og:url" content="https://nine-services-hub.vercel.app/">
+    <meta property="og:type" content="website">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Base Styles */
@@ -143,16 +157,22 @@
             color: white;
             border-radius: 8px;
             font-weight: bold;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
         }
 
         .brand h1 {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             color: var(--primary);
         }
 
         .brand span {
             color: var(--accent);
+        }
+
+        .brand small {
+            font-size: 0.7rem;
+            color: var(--light-text);
+            display: block;
         }
 
         .nav {
@@ -220,17 +240,23 @@
         .hero-content {
             position: relative;
             z-index: 1;
-            max-width: 600px;
+            max-width: 700px;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 3rem;
             line-height: 1.2;
+            margin-bottom: 15px;
+        }
+
+        .hero .tagline {
+            font-size: 1.3rem;
             margin-bottom: 20px;
+            opacity: 0.95;
         }
 
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             margin-bottom: 30px;
             opacity: 0.9;
         }
@@ -370,6 +396,8 @@
             color: white;
             font-size: 1.5rem;
             font-weight: bold;
+            text-align: center;
+            padding: 20px;
         }
 
         /* Gallery Section */
@@ -748,75 +776,6 @@
             opacity: 1;
         }
 
-        /* Form Submission Options */
-        .submission-options {
-            display: none;
-            background: var(--white);
-            border-radius: 10px;
-            padding: 25px;
-            margin-top: 20px;
-            box-shadow: var(--shadow);
-            border-top: 4px solid var(--success);
-        }
-
-        .submission-options.show {
-            display: block;
-            animation: fadeIn 0.5s ease;
-        }
-
-        .submission-title {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            color: var(--success);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .submission-buttons {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .submission-btn {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 12px 20px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s;
-        }
-
-        .whatsapp-submit {
-            background-color: #25D366;
-            color: white;
-        }
-
-        .whatsapp-submit:hover {
-            background-color: #128C7E;
-        }
-
-        .call-submit {
-            background-color: var(--primary);
-            color: white;
-        }
-
-        .call-submit:hover {
-            background-color: var(--primary-dark);
-        }
-
-        .email-submit {
-            background-color: var(--accent);
-            color: white;
-        }
-
-        .email-submit:hover {
-            background-color: #e68a00;
-        }
-
         /* Responsive */
         @media (max-width: 992px) {
             .about-content,
@@ -852,7 +811,11 @@
             }
 
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2rem;
+            }
+
+            .hero .tagline {
+                font-size: 1rem;
             }
 
             .hero-btns {
@@ -883,10 +846,6 @@
                 height: 50px;
                 font-size: 1.3rem;
             }
-
-            .submission-buttons {
-                flex-direction: column;
-            }
         }
 
         @media (max-width: 576px) {
@@ -895,7 +854,13 @@
             }
 
             .brand h1 {
-                font-size: 1.5rem;
+                font-size: 1rem;
+            }
+            
+            .logo {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
             }
         }
     </style>
@@ -906,7 +871,7 @@
 
     <!-- WhatsApp & Call Panel -->
     <div class="contact-panel">
-        <a href="https://wa.me/250780067777?text=Hello%20NINE%20SERVICES%20HUB,%20I%20would%20like%20to%20inquire%20about%20your%20services" target="_blank" class="contact-btn whatsapp-btn">
+        <a href="https://wa.me/250780067777?text=Hello%20NATIVE%20DIGITAL%20SOLUTIONS,%20I%20would%20like%20to%20inquire%20about%20your%20services" target="_blank" class="contact-btn whatsapp-btn">
             <i class="fab fa-whatsapp"></i>
             <span class="contact-tooltip">Chat with us on WhatsApp</span>
         </a>
@@ -920,8 +885,11 @@
     <header class="site-header">
         <div class="container header-inner">
             <div class="brand">
-                <div class="logo">9</div>
-                <h1>NINE <span>SERVICES HUB</span></h1>
+                <div class="logo">NDS</div>
+                <div>
+                    <h1>NATIVE <span>DIGITAL SOLUTIONS</span></h1>
+                    <small>Smart Printing, Digital Services & Bright Image Studio</small>
+                </div>
             </div>
             <nav class="nav">
                 <a class="nav-link active" data-page="home">Home</a>
@@ -942,8 +910,9 @@
         <section class="hero">
             <div class="container">
                 <div class="hero-content">
-                    <h1>Smart Prints & Bright Image Studio</h1>
-                    <p>Your one-stop papeterie and service hub in Musanze</p>
+                    <h1>NATIVE DIGITAL SOLUTIONS</h1>
+                    <div class="tagline">Smart Printing, Digital Services & Bright Image Studio</div>
+                    <p>Your one-stop digital solutions hub in Kamonyi District, Kayenzi Sector</p>
                     <div class="hero-btns">
                         <a class="btn nav-link" data-page="services">Our Services</a>
                         <a class="btn btn-outline nav-link" data-page="contact">Get in Touch</a>
@@ -957,47 +926,44 @@
             <div class="container">
                 <div class="section-title">
                     <h2>Our Core Services</h2>
-                    <p>Comprehensive printing, design, and office solutions for all your needs</p>
+                    <p>Comprehensive digital, printing, and office solutions for all your needs</p>
                 </div>
                 <div class="services-grid">
-                    <!-- Service 1 -->
                     <div class="service-card">
                         <div class="service-img">
                             <i class="fas fa-print"></i>
                         </div>
                         <div class="service-content">
-                            <h3>Printing & Photocopying</h3>
+                            <h3>Smart Printing & Photocopying</h3>
                             <p>High-quality color and black & white printing for all your document needs.</p>
                             <a class="service-link nav-link" data-page="services">Learn More <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
 
-                    <!-- Service 2 -->
                     <div class="service-card">
                         <div class="service-img">
                             <i class="fas fa-university"></i>
                         </div>
                         <div class="service-content">
-                            <h3>Bank Services</h3>
+                            <h3>Digital Banking Services</h3>
                             <p>Online banking assistance, mobile money services, and financial transactions.</p>
                             <a class="service-link nav-link" data-page="services">Learn More <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
 
-                    <!-- Service 3 -->
                     <div class="service-card">
                         <div class="service-img">
                             <i class="fas fa-pencil-alt"></i>
                         </div>
                         <div class="service-content">
-                            <h3>Typing & Document Editing</h3>
+                            <h3>Document Processing & Editing</h3>
                             <p>Professional typing and editing services for CVs, letters, and reports.</p>
                             <a class="service-link nav-link" data-page="services">Learn More <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
                 <div style="text-align: center; margin-top: 40px;">
-                    <a class="btn nav-link" data-page="services">View All 9 Services</a>
+                    <a class="btn nav-link" data-page="services">View All Services</a>
                 </div>
             </div>
         </section>
@@ -1007,9 +973,9 @@
             <div class="container">
                 <div class="about-content">
                     <div class="about-text">
-                        <h2>About NINE SERVICES HUB</h2>
-                        <p>NINE SERVICES HUB is your one-stop papeterie and service hub, providing a wide range of printing, design, and office solutions in Musanze.</p>
-                        <p>With years of experience and a commitment to quality, we serve individuals, businesses, and organizations with reliable and affordable services.</p>
+                        <h2>About NATIVE DIGITAL SOLUTIONS</h2>
+                        <p>NATIVE DIGITAL SOLUTIONS is your one-stop digital solutions hub, providing a wide range of smart printing, digital services, and office solutions in Kamonyi District, Kayenzi Sector.</p>
+                        <p>With our commitment to quality and customer satisfaction, we serve individuals, businesses, and organizations with reliable and affordable digital services.</p>
                         
                         <div class="about-features">
                             <div class="feature">
@@ -1033,7 +999,7 @@
                         <a class="btn nav-link" data-page="about">Learn More About Us</a>
                     </div>
                     <div class="about-image">
-                        Professional Printing Services
+                        Smart Digital Solutions<br>in Kamonyi
                     </div>
                 </div>
             </div>
@@ -1046,12 +1012,12 @@
             <div class="container">
                 <div class="section-title">
                     <h2>About Us</h2>
-                    <p>Learn more about NINE SERVICES HUB and our commitment to quality</p>
+                    <p>Learn more about NATIVE DIGITAL SOLUTIONS and our commitment to quality</p>
                 </div>
                 <div class="about-content">
                     <div class="about-text">
                         <h2>Our Story</h2>
-                        <p>NINE SERVICES HUB was established with a vision to provide comprehensive printing and office solutions to the Musanze community. Over the years, we have grown to become the go-to destination for all printing, design, and office service needs.</p>
+                        <p>NATIVE DIGITAL SOLUTIONS was established with a vision to provide comprehensive digital and printing solutions to the Kamonyi community. We have grown to become the go-to destination for all smart printing, digital services, and office solutions.</p>
                         <p>Our team of experienced professionals is dedicated to delivering high-quality services with quick turnaround times and competitive pricing.</p>
                         
                         <h3 style="margin-top: 30px;">Why Choose Us?</h3>
@@ -1083,7 +1049,7 @@
                         </div>
                     </div>
                     <div class="about-image">
-                        Our Team & Workspace
+                        Our Team & Workspace<br>Kamonyi District
                     </div>
                 </div>
             </div>
@@ -1099,7 +1065,7 @@
                         </div>
                         <div class="service-content">
                             <h3>Our Mission</h3>
-                            <p>To provide high-quality, reliable, and affordable printing and office solutions that meet the diverse needs of our customers in Musanze and beyond.</p>
+                            <p>To provide high-quality, reliable, and affordable digital and printing solutions that meet the diverse needs of our customers in Kamonyi and beyond.</p>
                         </div>
                     </div>
 
@@ -1109,7 +1075,7 @@
                         </div>
                         <div class="service-content">
                             <h3>Our Vision</h3>
-                            <p>To be the leading provider of comprehensive printing and office services in the region, known for excellence, innovation, and customer satisfaction.</p>
+                            <p>To be the leading provider of comprehensive digital and printing services in the region, known for excellence, innovation, and customer satisfaction.</p>
                         </div>
                     </div>
 
@@ -1132,59 +1098,54 @@
         <section class="services">
             <div class="container">
                 <div class="section-title">
-                    <h2>Our 9 Core Services</h2>
-                    <p>Comprehensive printing, design, and office solutions for all your needs</p>
+                    <h2>Our Core Services</h2>
+                    <p>Comprehensive digital, printing, and office solutions for all your needs</p>
                 </div>
                 <div class="services-grid">
-                    <!-- Service 1 -->
                     <div class="service-card">
                         <div class="service-img">
                             <i class="fas fa-print"></i>
                         </div>
                         <div class="service-content">
-                            <h3>Printing & Photocopying</h3>
+                            <h3>Smart Printing & Photocopying</h3>
                             <p>High-quality color and black & white printing for documents, photos, posters, flyers, and bulk printing with document binding and lamination services.</p>
                             <a class="service-link nav-link" data-page="contact">Get This Service <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
 
-                    <!-- Service 2 -->
                     <div class="service-card">
                         <div class="service-img">
                             <i class="fas fa-university"></i>
                         </div>
                         <div class="service-content">
-                            <h3>Bank Services</h3>
+                            <h3>Digital Banking Services</h3>
                             <p>Online banking assistance, mobile money services, bill payments, statement printing, and financial transaction support.</p>
                             <a class="service-link nav-link" data-page="contact">Get This Service <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
 
-                    <!-- Service 3 -->
                     <div class="service-card">
                         <div class="service-img">
                             <i class="fas fa-scanner"></i>
                         </div>
                         <div class="service-content">
-                            <h3>Scanning & Emailing</h3>
+                            <h3>Scanning & Digital Archiving</h3>
                             <p>Professional scanning services to digitize your documents and photos with precision and email them directly to you.</p>
                             <a class="service-link nav-link" data-page="contact">Get This Service <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
 
-                    <!-- Service 4 -->
                     <div class="service-card">
                         <div class="service-img">
                             <i class="fas fa-keyboard"></i>
                         </div>
                         <div class="service-content">
-                            <h3>Typing & Document Editing</h3>
+                            <h3>Document Processing & Editing</h3>
                             <p>Professional typing and editing services for CVs, letters, reports, certificates with proper formatting and professional layout.</p>
                             <a class="service-link nav-link" data-page="contact">Get This Service <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
 
-                    <!-- Service 5 -->
                     <div class="service-card">
                         <div class="service-img">
                             <i class="fas fa-laptop-code"></i>
@@ -1196,7 +1157,6 @@
                         </div>
                     </div>
 
-                    <!-- Service 6 -->
                     <div class="service-card">
                         <div class="service-img">
                             <i class="fas fa-palette"></i>
@@ -1208,7 +1168,6 @@
                         </div>
                     </div>
 
-                    <!-- Service 7 -->
                     <div class="service-card">
                         <div class="service-img">
                             <i class="fas fa-id-card"></i>
@@ -1220,7 +1179,6 @@
                         </div>
                     </div>
 
-                    <!-- Service 8 -->
                     <div class="service-card">
                         <div class="service-img">
                             <i class="fas fa-envelope-open-text"></i>
@@ -1232,7 +1190,6 @@
                         </div>
                     </div>
 
-                    <!-- Service 9 -->
                     <div class="service-card">
                         <div class="service-img">
                             <i class="fas fa-pencil-alt"></i>
@@ -1266,42 +1223,18 @@
                 </div>
                 
                 <div class="gallery-grid">
-                    <div class="gallery-item" data-category="printing">
-                        Document Printing
-                    </div>
-                    <div class="gallery-item" data-category="printing">
-                        Photo Printing
-                    </div>
-                    <div class="gallery-item" data-category="design">
-                        Graphic Design
-                    </div>
-                    <div class="gallery-item" data-category="design">
-                        Business Cards
-                    </div>
-                    <div class="gallery-item" data-category="banking">
-                        Bank Services
-                    </div>
-                    <div class="gallery-item" data-category="services">
-                        Scanning Services
-                    </div>
-                    <div class="gallery-item" data-category="printing">
-                        Large Format Printing
-                    </div>
-                    <div class="gallery-item" data-category="services">
-                        Lamination
-                    </div>
-                    <div class="gallery-item" data-category="design">
-                        Invitation Cards
-                    </div>
-                    <div class="gallery-item" data-category="services">
-                        Online Services
-                    </div>
-                    <div class="gallery-item" data-category="services">
-                        Stationery Supplies
-                    </div>
-                    <div class="gallery-item" data-category="printing">
-                        Binding Services
-                    </div>
+                    <div class="gallery-item" data-category="printing">Smart Document Printing</div>
+                    <div class="gallery-item" data-category="printing">Photo Printing</div>
+                    <div class="gallery-item" data-category="design">Graphic Design</div>
+                    <div class="gallery-item" data-category="design">Business Cards</div>
+                    <div class="gallery-item" data-category="banking">Digital Banking Services</div>
+                    <div class="gallery-item" data-category="services">Scanning Services</div>
+                    <div class="gallery-item" data-category="printing">Large Format Printing</div>
+                    <div class="gallery-item" data-category="services">Lamination</div>
+                    <div class="gallery-item" data-category="design">Invitation Cards</div>
+                    <div class="gallery-item" data-category="services">Online Services</div>
+                    <div class="gallery-item" data-category="services">Stationery Supplies</div>
+                    <div class="gallery-item" data-category="printing">Binding Services</div>
                 </div>
             </div>
         </section>
@@ -1313,7 +1246,7 @@
             <div class="container">
                 <div class="section-title">
                     <h2>Contact Us</h2>
-                    <p>Get in touch with us for all your printing and service needs</p>
+                    <p>Get in touch with us for all your digital and printing needs</p>
                 </div>
                 <div class="contact-content">
                     <div class="contact-info">
@@ -1323,7 +1256,7 @@
                                 <i class="fas fa-map-marker-alt"></i>
                                 <div>
                                     <h4>Location</h4>
-                                    <p>Near RP / Musanze College — Open Every Day</p>
+                                    <p>Kamonyi District, Kayenzi Sector — Open Every Day</p>
                                 </div>
                             </div>
                             <div class="contact-item">
@@ -1337,7 +1270,7 @@
                                 <i class="fas fa-envelope"></i>
                                 <div>
                                     <h4>Email</h4>
-                                    <p>nineserviceshub@gmail.com</p>
+                                    <p>nativesolutions@gmail.com</p>
                                 </div>
                             </div>
                             <div class="contact-item">
@@ -1363,26 +1296,26 @@
                         <form id="contactForm">
                             <div class="form-group">
                                 <label for="name">Your Name</label>
-                                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                                <input type="text" id="name" placeholder="Enter your name" required>
                             </div>
                             <div class="form-group">
                                 <label for="email">Your Email</label>
-                                <input type="email" id="email" name="email" placeholder="Enter your email">
+                                <input type="email" id="email" placeholder="Enter your email">
                             </div>
                             <div class="form-group">
                                 <label for="phone">Your Phone</label>
-                                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                                <input type="tel" id="phone" placeholder="Enter your phone number" required>
                             </div>
                             <div class="form-group">
                                 <label for="service">Service Interested In</label>
-                                <select id="service" name="service">
+                                <select id="service">
                                     <option value="">Select a service</option>
-                                    <option value="printing">Printing & Photocopying</option>
-                                    <option value="banking">Bank Services</option>
-                                    <option value="scanning">Scanning & Emailing</option>
-                                    <option value="typing">Typing & Document Editing</option>
+                                    <option value="printing">Smart Printing & Photocopying</option>
+                                    <option value="banking">Digital Banking Services</option>
+                                    <option value="scanning">Scanning & Digital Archiving</option>
+                                    <option value="typing">Document Processing & Editing</option>
                                     <option value="online">Online Applications</option>
-                                    <option value="design">Graphic Design</option>
+                                    <option value="design">Graphic Design & Branding</option>
                                     <option value="lamination">Lamination & ID Cards</option>
                                     <option value="invitations">Invitation Cards & Certificates</option>
                                     <option value="stationery">Stationery & Office Supplies</option>
@@ -1390,7 +1323,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="message">Your Message</label>
-                                <textarea id="message" name="message" placeholder="How can we help you?" required></textarea>
+                                <textarea id="message" placeholder="How can we help you?" required></textarea>
                             </div>
                             <button type="submit" class="btn">Send Message via WhatsApp</button>
                         </form>
@@ -1405,8 +1338,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-col">
-                    <h4>NINE SERVICES HUB</h4>
-                    <p>Your one-stop papeterie and service hub in Musanze, providing comprehensive printing, design, and office solutions.</p>
+                    <h4>NATIVE DIGITAL SOLUTIONS</h4>
+                    <p>Your one-stop digital solutions hub in Kamonyi District, Kayenzi Sector, providing comprehensive smart printing, digital services, and office solutions.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -1427,9 +1360,9 @@
                 <div class="footer-col">
                     <h4>Our Services</h4>
                     <ul class="footer-links">
-                        <li><a>Printing & Photocopying</a></li>
-                        <li><a>Bank Services</a></li>
-                        <li><a>Scanning & Emailing</a></li>
+                        <li><a>Smart Printing & Photocopying</a></li>
+                        <li><a>Digital Banking Services</a></li>
+                        <li><a>Scanning & Digital Archiving</a></li>
                         <li><a>Graphic Design</a></li>
                         <li><a>Online Applications</a></li>
                     </ul>
@@ -1438,7 +1371,7 @@
                     <h4>Contact Info</h4>
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
-                        <p>Near RP / Musanze College</p>
+                        <p>Kamonyi District, Kayenzi Sector</p>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
@@ -1446,12 +1379,12 @@
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        <p>nineserviceshub@gmail.com</p>
+                        <p>nativesolutions@gmail.com</p>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 NINE SERVICES HUB. All Rights Reserved.</p>
+                <p>&copy; 2024 NATIVE DIGITAL SOLUTIONS. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
@@ -1465,22 +1398,17 @@
                 const pageId = this.getAttribute('data-page');
                 if (!pageId) return;
                 
-                // Update active nav link
                 document.querySelectorAll('.nav-link').forEach(nav => {
                     nav.classList.remove('active');
                 });
                 this.classList.add('active');
                 
-                // Show selected page
                 document.querySelectorAll('.page').forEach(page => {
                     page.classList.remove('active');
                 });
                 document.getElementById(pageId).classList.add('active');
                 
-                // Close mobile menu if open
                 document.querySelector('.nav').classList.remove('active');
-                
-                // Scroll to top
                 window.scrollTo(0, 0);
             });
         });
@@ -1495,13 +1423,11 @@
             btn.addEventListener('click', function() {
                 const filter = this.getAttribute('data-filter');
                 
-                // Update active filter button
                 document.querySelectorAll('.filter-btn').forEach(b => {
                     b.classList.remove('active');
                 });
                 this.classList.add('active');
                 
-                // Filter gallery items
                 document.querySelectorAll('.gallery-item').forEach(item => {
                     if (filter === 'all' || item.getAttribute('data-category') === filter) {
                         item.style.display = 'flex';
@@ -1516,23 +1442,18 @@
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Get form values
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const phone = document.getElementById('phone').value;
             const service = document.getElementById('service').value;
             const message = document.getElementById('message').value;
             
-            // Create WhatsApp message
-            const whatsappMessage = `Hello NINE SERVICES HUB!%0A%0A*New Contact Form Submission*%0A%0A*Name:* ${name}%0A*Email:* ${email || 'Not provided'}%0A*Phone:* ${phone}%0A*Service Interested In:* ${service || 'Not specified'}%0A*Message:* ${message}`;
+            const whatsappMessage = `Hello NATIVE DIGITAL SOLUTIONS!%0A%0A*New Contact Form Submission*%0A%0A*Name:* ${name}%0A*Email:* ${email || 'Not provided'}%0A*Phone:* ${phone}%0A*Service Interested In:* ${service || 'Not specified'}%0A*Message:* ${message}`;
             
-            // Open WhatsApp with pre-filled message
             window.open(`https://wa.me/250780067777?text=${whatsappMessage}`, '_blank');
             
-            // Show success notification
             showNotification(`Thank you ${name}! Opening WhatsApp to send your message.`, 'success', 5000);
             
-            // Reset form
             this.reset();
         });
 
@@ -1540,23 +1461,19 @@
         function showNotification(message, type = 'info', duration = 5000) {
             const notificationContainer = document.getElementById('notificationContainer');
             
-            // Create notification element
             const notification = document.createElement('div');
             notification.className = `notification ${type}`;
             
-            // Set icon based on type
             let icon = 'info-circle';
             if (type === 'success') icon = 'check-circle';
             if (type === 'error') icon = 'exclamation-circle';
             if (type === 'warning') icon = 'exclamation-triangle';
             
-            // Set title based on type
             let title = 'Information';
             if (type === 'success') title = 'Success';
             if (type === 'error') title = 'Error';
             if (type === 'warning') title = 'Warning';
             
-            // Create notification content
             notification.innerHTML = `
                 <div class="notification-icon">
                     <i class="fas fa-${icon}"></i>
@@ -1570,21 +1487,17 @@
                 </button>
             `;
             
-            // Add to container
             notificationContainer.appendChild(notification);
             
-            // Show notification with animation
             setTimeout(() => {
                 notification.classList.add('show');
             }, 10);
             
-            // Close button functionality
             const closeBtn = notification.querySelector('.notification-close');
             closeBtn.addEventListener('click', () => {
                 closeNotification(notification);
             });
             
-            // Auto-close after duration
             if (duration > 0) {
                 setTimeout(() => {
                     if (notification.parentNode) {
@@ -1603,13 +1516,11 @@
             }, 300);
         }
         
-        // Set current year in footer
-        document.querySelector('.footer-bottom p').innerHTML = `&copy; ${new Date().getFullYear()} NINE SERVICES HUB. All Rights Reserved.`;
+        document.querySelector('.footer-bottom p').innerHTML = `&copy; ${new Date().getFullYear()} NATIVE DIGITAL SOLUTIONS. All Rights Reserved.`;
         
-        // Show welcome notification only on first load
         document.addEventListener('DOMContentLoaded', function() {
             setTimeout(() => {
-                showNotification('Welcome to NINE SERVICES HUB! Your one-stop service hub in Musanze.', 'info', 4000);
+                showNotification('Welcome to NATIVE DIGITAL SOLUTIONS! Your smart printing and digital services hub in Kamonyi.', 'info', 4000);
             }, 1000);
         });
     </script>
